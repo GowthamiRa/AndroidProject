@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/CustomToolBar2"
+        app:contentInsetStartWithNavigation="20dp"
+        app:titleMarginTop="12dp"
+        app:titleMarginStart="-1dp"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_collapseMode="pin"
+        android:layout_gravity="start"
+        android:gravity="start"
+        android:background="@drawable/shadow_toolbar"
+        app:popupTheme="@style/Theme.LammaPay.PopupOverlay" >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:src="@drawable/designer_logo"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:textStyle="normal"
+            android:text="Designer"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+</LinearLayout>

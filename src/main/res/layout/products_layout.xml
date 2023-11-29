@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/CustomToolBar2"
+            app:contentInsetStartWithNavigation="20dp"
+            app:titleMarginTop="12dp"
+            app:titleMarginStart="-1dp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:background="@drawable/shadow_toolbar"
+            app:popupTheme="@style/Theme.LammaPay.PopupOverlay" >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:src="@drawable/designer_logo"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textStyle="normal"
+                android:text="Designer"
+                android:visibility="invisible"
+                />
+            <TextView
+                android:id="@+id/logout"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:layout_gravity="end"
+                android:textSize="14sp"
+                android:text="@string/logout"
+                android:fontFamily="@font/poppins_semibold"
+                />
+        </androidx.appcompat.widget.Toolbar>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/kingsize_bed_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="@string/kingsize_bed"
+                android:textSize="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/king_size_bed_cover"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/garden_table_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="@string/garden_table"
+                android:textSize="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/garden_table"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

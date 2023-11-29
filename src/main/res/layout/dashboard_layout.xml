@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/CustomToolBar2"
+            app:contentInsetStartWithNavigation="20dp"
+            app:titleMarginTop="12dp"
+            app:titleMarginStart="-1dp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:background="@drawable/shadow_toolbar"
+            app:popupTheme="@style/Theme.LammaPay.PopupOverlay" >
+            <ImageView
+                android:id="@+id/back_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:src="@drawable/ic_icon_back"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textStyle="normal"
+                android:text="Designer"
+                android:visibility="invisible"
+                />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="@string/kingsize_bed"
+                android:textSize="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="@string/kingsize_bed_content"
+                android:fontFamily="@font/poppins_regular"
+                />
+
+            <ImageView
+                android:id="@+id/product_img"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/king_size_bed_cover"
+                />
+
+            <LinearLayout
+                android:id="@+id/review_edit_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textSize="14sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="@string/rating_text"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="1"
+                    android:progressTint="@color/yellow"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="14sp"
+                    android:layout_gravity="center"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:text="@string/write_comments_txt"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="20dp"
+                    android:padding="10dp"
+                    android:maxLines="10"
+                    android:text=""
+                    android:ems="10"
+                    android:id="@+id/content"
+                    android:layout_gravity="start|top"
+                    android:gravity="start|top"
+                    android:hint="@string/write_comments"
+                    android:layout_below="@+id/ratingBar"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:background="@drawable/ic_edit"/>
+
+
+
+
+                <Button
+                    android:id="@+id/btnSend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_below="@+id/content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="14dp"
+                    android:text="Post"
+                    android:background="@drawable/bg_button_shape"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/review_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:layout_marginBottom="15sp"
+                    android:layout_gravity="center"
+                    android:gravity="start"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="@string/review_title"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    />
+
+                <ImageView
+                    android:id="@+id/image_chat_picture"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/profile_img" />
+
+                <TextView
+                    android:id="@+id/review_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:layout_gravity="center"
+                    android:gravity="center|start"
+                    android:textColor="@color/black"
+                    android:text="@string/kingsize_bed_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:background="@drawable/ic_edit_bg"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
